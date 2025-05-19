@@ -6,8 +6,20 @@
 JavaWebCart 專案目錄結構
 src/main/java
            └── cart
-                     ├─ controller
+                ├─ controller ─ UserRegisterServlet.java (會員註冊)
+			      ├─ UserListServlet.java (會員列表)
+			      ├─ AuthCodeServlet.java (認證碼)
+			      ├─ UserLoginServlet.java (登入)
+			      └─ UserLogoutServlet.java (登出)
+		 ├─ service
+   		 │      ├ impl
+      		 │      │  └─ UserRegisterServiceImpl.java (實作類, 實現功能)
+	 	 │      └─  UserRegisterService.java (介面類 interface, 定義功能)
 	         ├─ dao
+	  	 │   ├ impl
+     		 │   │  └─ UserRegisterDAOImpl.java (實作類, 實現功能)
+		 │    └─  UserRegisterDAO.java (介面類 interface, 定義功能)
+   		 │
 	         ├─ exception
 	         ├─ filter
 	         ├─ model
@@ -22,5 +34,6 @@ src/main/webapp
 │        └── view
 │                      └─ cart
 │                              ├─ index.jsp 購物車主頁
+			       ├─ user_list.jsp 會員註冊頁面
 │                              └─ menu.jsp 購物車上方 Menu
 └── index.html ← 從此執行 (並在頁面中點選購物車專題連結)
